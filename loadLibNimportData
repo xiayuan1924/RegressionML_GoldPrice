@@ -10,11 +10,9 @@ library(dplyr)
 
 # Load Library for REGRESSION Model
 install.packages('caret')
-install.packages('mlbench')
 library(caret)
-library(mlbench)
 
-# Data Prep
+# Load Data
 goldPrice <- read_excel('GoldPrice.xlsx')
 goldPrice$date <- as.Date(goldPrice$date, format = '%d/%m/%y')
 goldPrice <- na.omit(goldPrice)
